@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# 🌆 CityShield — Place-First Urban Safety Intelligence Platform
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live URL**: https://example.com  
+**Repository**: https://github.com/your-org/cityshield
 
-## How can I edit this code?
+CityShield is a **place-first, explainable urban safety intelligence platform** that helps people decide **when and where it is safer to move** using time-aware crime trends, interactive heatmaps, and an AI-powered safety assistant.  
+This is a **decision-support tool**, not an emergency service.
 
-There are several ways of editing your application.
+## What does this project do?
 
-**Use Lovable**
+CityShield enables users to:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Search any **city / locality / area**
+- Instantly view an **area safety summary**
+- Explore **interactive crime heatmaps**
+- Understand **time-based risk patterns**
+- Compare localities using **city safety rankings**
+- Ask questions via a **context-aware safety assistant chatbot**
 
-Changes made via Lovable will be committed automatically to this repo.
+## Why is this project useful?
 
-**Use your preferred IDE**
+Urban safety information today is often static, non-explainable, and hard to act on.  
+CityShield improves this by providing:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Place-first entry flow** (search before map)
+- **Safety score (0–100)** with clear reasoning
+- **Time-aware risk analysis** (hour / day / weekend)
+- **Explainable insights**, not black-box labels
+- **Trust signals** such as data freshness
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Simple Architecture Overview
 
-Follow these steps:
+CityShield uses a **modern, serverless architecture** for scalability and performance.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```mermaid
+graph TD
+    User((User))
+    User -->|Interacts| FE[React Frontend - Vite]
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+    FE -->|Verify Identity| AUTH[Supabase Auth]
+    FE -->|Fetch Safety Data| DB[Supabase PostgreSQL]
+    FE -->|Upload Incident Data| STORAGE[Supabase Storage]
 
-# Step 3: Install the necessary dependencies.
-npm i
+    FE -->|Render Maps & Heatmaps| MAPS[Maps API]
+    FE -->|Risk Scoring & Trends| AI[AI Risk Engine]
+    FE -->|Safety Queries| BOT[Safety Assistant Chatbot]
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+    subgraph Backend Services
+        AUTH
+        DB
+        STORAGE
+    end
