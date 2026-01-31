@@ -5,262 +5,99 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 20% 10%;
+    /* Deep Violet & Intelligence Palette */
+    --background: 265 40% 99%;
+    --foreground: 265 50% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 265 50% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
-
-    --primary: 220 70% 50%;
+    --primary: 265 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 20% 20%;
+    --muted: 265 20% 95%;
+    --muted-foreground: 265 10% 45%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    --border: 265 20% 90%;
+    --ring: 265 85% 55%;
 
-    --accent: 220 15% 90%;
-    --accent-foreground: 220 20% 20%;
+    --radius: 1rem;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 220 70% 50%;
-
-    --radius: 0.75rem;
-
-    /* Safety-specific colors */
+    /* Safety Status Colors */
     --safe: 142 71% 45%;
-    --safe-foreground: 0 0% 100%;
     --moderate: 45 93% 47%;
-    --moderate-foreground: 0 0% 10%;
     --danger: 0 72% 51%;
-    --danger-foreground: 0 0% 100%;
 
-    /* Chart colors */
-    --chart-1: 220 70% 50%;
-    --chart-2: 142 71% 45%;
-    --chart-3: 45 93% 47%;
-    --chart-4: 0 72% 51%;
-    --chart-5: 280 65% 60%;
-
-    /* Glassmorphism */
-    --glass: 0 0% 100% / 70%;
-    --glass-border: 0 0% 100% / 20%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 70% 50%) 0%, hsl(240 70% 60%) 100%);
-    --gradient-safe: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(160 71% 40%) 100%);
-    --gradient-danger: linear-gradient(135deg, hsl(0 72% 51%) 0%, hsl(20 80% 50%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 20% 96%) 0%, hsl(220 20% 100%) 100%);
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 20% 10% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 20% 10% / 0.1), 0 2px 4px -2px hsl(220 20% 10% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(220 20% 10% / 0.1), 0 4px 6px -4px hsl(220 20% 10% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(220 20% 10% / 0.1), 0 8px 10px -6px hsl(220 20% 10% / 0.1);
-    --shadow-glow: 0 0 40px hsl(220 70% 50% / 0.15);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 220 20% 10%;
-    --sidebar-primary: 220 70% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 94%;
-    --sidebar-accent-foreground: 220 20% 20%;
-    --sidebar-border: 220 15% 90%;
-    --sidebar-ring: 220 70% 50%;
+    /* Lovable Mesh Colors - The Magic Sauce */
+    --mesh-1: hsla(265, 90%, 65%, 0.25);
+    --mesh-2: hsla(290, 85%, 60%, 0.2);
+    --mesh-3: hsla(240, 95%, 60%, 0.15);
+    --mesh-4: hsla(320, 90%, 55%, 0.1);
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 210 20% 95%;
+    --background: 265 45% 4%;
+    --foreground: 265 10% 98%;
+    --card: 265 45% 6%;
+    --border: 265 30% 15%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 20% 95%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 20% 95%;
-
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 8%;
-
-    --secondary: 222 30% 18%;
-    --secondary-foreground: 210 20% 95%;
-
-    --muted: 222 30% 18%;
-    --muted-foreground: 215 20% 55%;
-
-    --accent: 222 30% 22%;
-    --accent-foreground: 210 20% 95%;
-
-    --destructive: 0 62% 55%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 222 30% 20%;
-    --input: 222 30% 20%;
-    --ring: 217 91% 60%;
-
-    /* Safety-specific colors - dark mode */
-    --safe: 142 71% 45%;
-    --safe-foreground: 0 0% 100%;
-    --moderate: 45 93% 55%;
-    --moderate-foreground: 0 0% 10%;
-    --danger: 0 65% 55%;
-    --danger-foreground: 0 0% 100%;
-
-    /* Chart colors - dark mode */
-    --chart-1: 217 91% 60%;
-    --chart-2: 142 71% 45%;
-    --chart-3: 45 93% 55%;
-    --chart-4: 0 65% 55%;
-    --chart-5: 280 65% 65%;
-
-    /* Glassmorphism - dark mode */
-    --glass: 222 47% 11% / 80%;
-    --glass-border: 0 0% 100% / 10%;
-
-    /* Gradients - dark mode */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(240 80% 65%) 100%);
-    --gradient-safe: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(160 71% 40%) 100%);
-    --gradient-danger: linear-gradient(135deg, hsl(0 65% 55%) 0%, hsl(20 75% 55%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 11%) 100%);
-
-    /* Shadows - dark mode */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.2);
-
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 222 47% 8%;
-    --sidebar-accent: 222 30% 18%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 222 30% 20%;
-    --sidebar-ring: 217 91% 60%;
+    --mesh-1: hsla(265, 80%, 40%, 0.3);
+    --mesh-2: hsla(290, 70%, 30%, 0.2);
+    --mesh-3: hsla(240, 60%, 20%, 0.25);
+    --mesh-4: hsla(320, 70%, 35%, 0.15);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
-  .glass {
-    background: hsl(var(--glass));
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--glass-border));
-  }
-
-  .gradient-primary {
-    background: var(--gradient-primary);
-  }
-
+  /* THE MESH GRADIENT UTILITY */
   .gradient-hero {
-    background: var(--gradient-hero);
+    background-color: hsl(var(--background));
+    background-image: 
+      radial-gradient(at 0% 0%, var(--mesh-1) 0px, transparent 55%),
+      radial-gradient(at 100% 0%, var(--mesh-2) 0px, transparent 55%),
+      radial-gradient(at 100% 100%, var(--mesh-3) 0px, transparent 55%),
+      radial-gradient(at 0% 100%, var(--mesh-4) 0px, transparent 55%),
+      radial-gradient(at 50% 50%, var(--mesh-1) 0px, transparent 60%);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  /* FROSTED GLASS EFFECT */
+  .glass {
+    background: hsla(var(--background) / 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid hsla(var(--primary) / 0.08);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
   }
 
   .text-gradient {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, hsl(265 90% 60%), hsl(290 85% 55%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.5s ease-out forwards;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
+  .animate-slide-up { animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { 
+  from { opacity: 0; transform: translateY(30px); } 
+  to { opacity: 1; transform: translateY(0); } 
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-/* Leaflet Popup Styling */
+/* Map Popups Polishing */
 .leaflet-popup-content-wrapper {
-  background: hsl(var(--card));
-  color: hsl(var(--card-foreground));
-  border-radius: 0.75rem;
-  border: 1px solid hsl(var(--border));
-  box-shadow: var(--shadow-lg);
-}
-
-.leaflet-popup-tip {
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
-}
-
-.leaflet-popup-close-button {
-  color: hsl(var(--muted-foreground)) !important;
-}
-
-.leaflet-popup-close-button:hover {
+  @apply glass !important;
   color: hsl(var(--foreground)) !important;
-}
-
-.leaflet-container {
-  font-family: inherit;
-}
-
-.leaflet-control-zoom {
-  border: none !important;
-  box-shadow: var(--shadow-md) !important;
-}
-
-.leaflet-control-zoom a {
-  background: hsl(var(--card)) !important;
-  color: hsl(var(--foreground)) !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
-.leaflet-control-zoom a:hover {
-  background: hsl(var(--accent)) !important;
-}
-
-.leaflet-control-attribution {
-  background: hsl(var(--card) / 0.8) !important;
-  color: hsl(var(--muted-foreground)) !important;
-  font-size: 10px;
-}
-
-.leaflet-control-attribution a {
-  color: hsl(var(--primary)) !important;
+  border-radius: var(--radius) !important;
 }
