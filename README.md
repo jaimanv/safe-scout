@@ -3,7 +3,7 @@
 ## Project Info
 
 **Live URL**: https://safe-scout.vercel.app/  
-**Repository**: https://github.com/your-org/SafeScout
+**Repository**: https://github.com/jaimanv/Safe-Scout
 
 SafeScout is a **place-first, explainable urban safety intelligence platform** that helps people decide **when and where it is safer to move** using time-aware crime trends, interactive heatmaps, and an AI-powered safety assistant.  
 This is a **decision-support tool**, not an emergency service.
